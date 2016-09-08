@@ -6,7 +6,7 @@
 import os
 import time
 from sense_hat import SenseHat
-cyan = (0, 148, 255)
+cyan = (0, 148, 200)
 purple = (238, 130, 238)
 yellow  = (240, 230, 140)
 sensebrd = SenseHat()
