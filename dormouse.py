@@ -1,14 +1,12 @@
-# Dormouse by Mandrake Fernflower, 2016
+#!/usr/bin/python 
+
+# Dormouse v1 by Mandrake Fernflower, 2016
 # Free to use and modify - just leave this message intact
 # Made for a RPI3 with a SenseHat
-# todo: add support for psutil
-# todo: improve colors
 import os
 import time
 from sense_hat import SenseHat
-cyan = (0, 148, 200)
-purple = (238, 130, 238)
-yellow  = (240, 230, 140)
+
 sensebrd = SenseHat()
 sensebrd.low_light = True
 sensebrd.rotation = 180
@@ -19,16 +17,13 @@ def getCPUtemperature():
 
 while True:
    sensebrd.clear()
-   sensebrd.show_message("CPU " + getCPUtemperature() + "C", text_colour=cyan)
+   sensebrd.show_message("CPU " + getCPUtemperature() + "C", text_colour=[0, 148, 200])
    time.sleep(8)
-   sensebrd.clear()
    etempraw = sensebrd.get_temperature_from_humidity()
    etemp = round(etempraw, 1)
-   sensebrd.show_message("EXT " + str(etemp) + "C", text_colour=yellow)
+   sensebrd.show_message("EXT " + str(etemp) + "C", text_colour=[240, 230, 140])
    time.sleep(8)
-   sensebrd.clear()
    rhraw = sensebrd.get_humidity()
    rh = round(rhraw, 1)
-   sensebrd.show_message("RH % " + str(rh), text_colour=purple)
-   sensebrd.clear()
+   sensebrd.show_message("RH % " + str(rh), text_colour=[0, 128, 0])
    time.sleep(30)
