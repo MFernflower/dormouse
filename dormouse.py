@@ -25,5 +25,5 @@ while True:
    time.sleep(8)
    rhraw = sensebrd.get_humidity()
    rh = round(rhraw, 1)
-   sensebrd.show_message("RH % " + str(rh), text_colour=[0, 128, 0])
+   sensebrd.show_message("RH % " + str(rh), text_colour=[0, 110, 0])
    time.sleep(30)
