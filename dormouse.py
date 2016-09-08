@@ -1,6 +1,7 @@
 # Dormouse by Mandrake Fernflower, 2016
 # Free to use and modify - just leave this message intact
 # Made for a RPI3 with a SenseHat
+# todo: add support for psutil
 import os
 import time
 from sense_hat import SenseHat
