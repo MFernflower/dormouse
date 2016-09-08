@@ -2,6 +2,7 @@
 # Free to use and modify - just leave this message intact
 # Made for a RPI3 with a SenseHat
 # todo: add support for psutil
+# todo: improve colors
 import os
 import time
 from sense_hat import SenseHat
@@ -10,6 +11,7 @@ purple = (238, 130, 238)
 yellow  = (240, 230, 140)
 sensebrd = SenseHat()
 sensebrd.low_light = True
+sensebrd.rotation = 180
 
 def getCPUtemperature():
     res = os.popen('vcgencmd measure_temp').readline()
